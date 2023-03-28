@@ -11,17 +11,22 @@ public class PopUpUpgrade : MonoBehaviour
         button.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void popUp1()
-    {
-        if (GameManager.upgrades1 >= 4)
+    {   
+        if (((GameManager.upgrades1 == 5) && GameManager.upgrades1 <= 6) && GameManager.currentScore >=)
         {
             button.gameObject.SetActive(true);
         } 
+    }
+
+    public void popbuy1(){
+        if(GameManager.currentScore>= 500){
+
+        
+        button.gameObject.SetActive(false);
+        GameManager.ClickPower++;
+        GameManager.currentScore -= 500;
+        }
     }
 }

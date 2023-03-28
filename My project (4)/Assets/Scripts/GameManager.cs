@@ -6,8 +6,8 @@ public class GameManager : MonoBehaviour
 {
     //Click
     public Text scoreText;
-    public double currentScore;
-    public float ClickPower;
+    public static double currentScore;
+    public static float ClickPower;
     public float scorepersecond;
     public float x;
 
@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     public Text Upgrade3;
     public double upgrades3;
 
+    public double testupgrades =upgrades1;
+
     // Randome Upgrade
     public Text randup1;
     public int randCost;
@@ -34,7 +36,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentScore = 10000;
+        currentScore = 725;
         ClickPower = 1;
         scorepersecond = 0;
         x = 0;
@@ -65,7 +67,7 @@ public class GameManager : MonoBehaviour
     {  
         if (currentScore >= cost1)
         {
-            upgrades1++;
+            upgrades1 += 1;
             currentScore -= cost1;
             x += 1;
             cost1 += 15;
