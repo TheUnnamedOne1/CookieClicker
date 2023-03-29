@@ -14,7 +14,7 @@ public class PopUpUpgrade : MonoBehaviour
 
     public void popUp1()
     {   
-        if (((GameManager.upgrades1 == 5) && GameManager.upgrades1 <= 6) && GameManager.currentScore >=)
+        if (((GameManager.upgrades1 == 5) && GameManager.upgrades1 <= 6) && GameManager.currentScore >= 0)
         {
             button.gameObject.SetActive(true);
         } 
